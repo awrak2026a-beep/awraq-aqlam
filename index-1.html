@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>أوراق وأقلام | استنساخ وقرطاسية</title>
+<meta name="description" content="مكتبة أوراق وأقلام: تصوير مستندات، طباعة، تغليف، تجليد وقرطاسية.">
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* ===== الألوان: غيّرها من هنا فقط ===== */
+  :root {
+    --paper: #fbfcfe;
+    --ink: #14213d;
+    --line: #c9d6ea;
+    --margin: #e4737a;
+    --mark: #ffe066;
+    --muted: #55607a;
+    --display: "Reem Kufi", "Tajawal", system-ui, sans-serif;
+    --body: "Tajawal", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: var(--body);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--ink);
+    background-color: var(--paper);
+    /* خطوط دفتر مسطّر */
+    background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 31px, var(--line) 31px, var(--line) 32px);
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  /* خط الهامش الأحمر */
+  body::before {
+    content: "";
+    position: fixed; top: 0; bottom: 0; right: 28px;
+    width: 2px; background: var(--margin); opacity: .55;
+    pointer-events: none;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 56px 0 20px; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+
+  header.hero { padding: 64px 0 40px; }
+  .hero h1 {
+    font-family: var(--display);
+    font-size: clamp(3rem, 14vw, 5.5rem);
+    line-height: 1.15;
+    margin: 0 0 12px;
+    font-weight: 700;
+    background: linear-gradient(transparent 62%, var(--mark) 62%, var(--mark) 92%, transparent 92%);
+    display: inline-block;
+  }
+  .hero p { margin: 0 0 24px; max-width: 34ch; color: var(--muted); font-size: 1.15rem; }
+
+  .btn {
+    display: inline-block; padding: 12px 26px;
+    background: var(--ink); color: #fff; text-decoration: none;
+    font-weight: 700; border-radius: 4px;
+  }
+  .btn:hover { background: #22345e; }
+
+  section { padding: 36px 0; }
+  h2 { font-family: var(--display); font-size: 1.8rem; margin: 0 0 8px; }
+  .note { color: var(--muted); margin: 0 0 20px; }
+
+  /* قائمة الأسعار: اسم الخدمة ... السعر */
+  .prices { list-style: none; margin: 0; padding: 0; background: var(--paper); border: 1px solid var(--line); }
+  .prices li { display: flex; align-items: baseline; gap: 10px; padding: 10px 16px; border-bottom: 1px solid var(--line); }
+  .prices li:last-child { border-bottom: 0; }
+  .prices .dots { flex: 1; border-bottom: 2px dotted var(--line); transform: translateY(-4px); }
+  .prices .price { font-weight: 700; white-space: nowrap; }
+
+  .items { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 0; list-style: none; }
+  .items li { background: var(--paper); border: 1px solid var(--ink); padding: 4px 16px; border-radius: 999px; }
+
+  .contact p { margin: 0 0 6px; }
+  footer { padding: 28px 0 40px; color: var(--muted); font-size: .95rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>أوراق وأقلام</h1>
+    <p>استنساخ، طباعة، تغليف وقرطاسية. كل ما تحتاجه للدراسة والعمل في مكان واحد.</p>
+    <a class="btn" href="#order">اطلب طباعتك</a>
+  </header>
+
+  <main>
+    <section id="services">
+      <h2>الخدمات والأسعار</h2>
+      <p class="note">الأسعار للصفحة الواحدة. اتصل بنا للكميات الكبيرة.</p>
+      <!-- لتعديل سعر: غيّر الرقم داخل <span class="price"> -->
+      <ul class="prices">
+        <li><span>تصوير أبيض وأسود</span><span class="dots"></span><span class="price">٠٠٠</span></li>
+        <li><span>طباعة أبيض وأسود</span><span class="dots"></span><span class="price">٠٠٠</span></li>
+        <li><span>طباعة ملونة</span><span class="dots"></span><span class="price">٠٠٠</span></li>
+        <li><span>تغليف (لامينيشن)</span><span class="dots"></span><span class="price">٠٠٠</span></li>
+        <li><span>تجليد</span><span class="dots"></span><span class="price">٠٠٠</span></li>
+      </ul>
+    </section>
+
+    <section id="stationery">
+      <h2>القرطاسية</h2>
+      <p class="note">متوفر لدينا:</p>
+      <!-- لإضافة منتج: انسخ سطر <li> وغيّر الاسم -->
+      <ul class="items">
+        <li>دفاتر</li>
+        <li>أقلام حبر ورصاص</li>
+        <li>أقلام تحديد</li>
+        <li>ملفات وحافظات</li>
+        <li>ورق A4</li>
+        <li>مستلزمات مدرسية</li>
+      </ul>
+    </section>
+
+    <section id="order">
+      <h2>اطلب طباعتك</h2>
+      <p class="note">أرسل ملفك عبر واتساب وحدّد عدد النسخ ونوع الطباعة، ونبلغك عندما يجهز.</p>
+      <!-- غيّر الرقم 000000000000 إلى رقمك مع رمز الدولة بدون + -->
+      <a class="btn" href="https://wa.me/000000000000?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D8%A8%D8%A7%D8%B9%D8%A9%20%D9%85%D9%84%D9%81" target="_blank" rel="noopener noreferrer">أرسل الملف عبر واتساب</a>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>تواصل معنا</h2>
+      <p>العنوان: اكتب عنوان المكتبة هنا</p>
+      <p>ساعات الدوام: اكتب الأوقات هنا</p>
+      <p>الهاتف: اكتب الرقم هنا</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© أوراق وأقلام. تصميم وتطوير: عباس كامل</p>
+  </footer>
+
+</div>
+</body>
+</html>
