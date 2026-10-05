@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>أوراق وأقلام | استنساخ وقرطاسية</title>
+<meta name="description" content="مكتبة أوراق وأقلام: استنساخ ملون وأبيض وأسود، كبس حراري، طباعة على الملابس، تصاميم وقرطاسية.">
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* ===== الألوان: غيّرها من هنا فقط ===== */
+  :root {
+    --paper: #ffffff;
+    --ink: #14213d;
+    --line: #d5def0;
+    --mark: #ffe066;
+    --muted: #4a5470;
+    --display: "Reem Kufi", "Tajawal", system-ui, sans-serif;
+    --body: "Tajawal", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--body);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--ink);
+    /* خلفية ملونة بألوان الطباعة: سماوي، وردي، أصفر */
+    background-color: #fffdf6;
+    background-image:
+      radial-gradient(circle at 10% 6%,  rgba(0,174,239,.32) 0, transparent 40%),
+      radial-gradient(circle at 94% 20%, rgba(236,0,140,.24) 0, transparent 42%),
+      radial-gradient(circle at 14% 58%, rgba(255,222,23,.42) 0, transparent 44%),
+      radial-gradient(circle at 92% 84%, rgba(0,174,239,.26) 0, transparent 42%),
+      radial-gradient(circle at 8% 100%, rgba(236,0,140,.20) 0, transparent 40%);
+    background-repeat: no-repeat;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+
+  header.hero { padding: 64px 0 40px; }
+  .hero h1 {
+    font-family: var(--display);
+    font-size: clamp(3rem, 14vw, 5.5rem);
+    line-height: 1.15;
+    margin: 0 0 12px;
+    font-weight: 700;
+    background: linear-gradient(transparent 62%, var(--mark) 62%, var(--mark) 92%, transparent 92%);
+    display: inline-block;
+  }
+  .hero p { margin: 0 0 24px; max-width: 36ch; color: var(--muted); font-size: 1.15rem; }
+
+  .btn {
+    display: inline-block; padding: 12px 26px;
+    background: var(--ink); color: #fff; text-decoration: none;
+    font-weight: 700; border-radius: 4px;
+  }
+  .btn:hover { background: #22345e; }
+
+  section { padding: 32px 0; }
+  h2 { font-family: var(--display); font-size: 1.8rem; margin: 0 0 8px; }
+  .note { color: var(--muted); margin: 0 0 20px; }
+
+  .list { list-style: none; margin: 0; padding: 0; background: rgba(255,255,255,.88); border: 1px solid var(--line); border-radius: 6px; }
+  .list li { padding: 10px 16px; border-bottom: 1px solid var(--line); }
+  .list li:last-child { border-bottom: 0; }
+
+  .items { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 0; list-style: none; }
+  .items li { background: rgba(255,255,255,.9); border: 1px solid var(--ink); padding: 4px 16px; border-radius: 999px; }
+
+  .contact p { margin: 0 0 6px; }
+  footer { padding: 28px 0 40px; color: var(--muted); font-size: .95rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>أوراق وأقلام</h1>
+    <p>استنساخ، طباعة، كبس حراري وقرطاسية. كل ما تحتاجه للدراسة والعمل في مكان واحد.</p>
+    <a class="btn" href="#order">اطلب طباعتك</a>
+  </header>
+
+  <main>
+    <section id="services">
+      <h2>الخدمات</h2>
+      <p class="note">للاستفسار عن الأسعار تواصل معنا عبر واتساب.</p>
+      <!-- لإضافة خدمة: انسخ سطر <li> وغيّر النص -->
+      <ul class="list">
+        <li>استنساخ ألوان</li>
+        <li>استنساخ أبيض وأسود</li>
+        <li>كبس حراري</li>
+        <li>طباعة على الملابس والقبعات والكلاصات</li>
+        <li>تصميم سجلات بكافة أنواعها</li>
+        <li>كتابة Word</li>
+        <li>إضافة الملفات إلى الأقراص</li>
+        <li>كافة أنواع التصاميم</li>
+        <li>كافة أنواع التقديم الإلكتروني</li>
+      </ul>
+    </section>
+
+    <section id="stationery">
+      <h2>القرطاسية</h2>
+      <p class="note">متوفر لدينا:</p>
+      <!-- لإضافة منتج: انسخ سطر <li> وغيّر الاسم -->
+      <ul class="items">
+        <li>دفاتر</li>
+        <li>سجلات</li>
+        <li>أقلام رصاص وجاف وماجك</li>
+        <li>أقلام تحديد</li>
+        <li>ملفات وحافظات</li>
+        <li>ورق بند بجميع أحجامه</li>
+        <li>كافة المستلزمات المدرسية</li>
+        <li>اكسسوارات</li>
+      </ul>
+    </section>
+
+    <section id="order">
+      <h2>اطلب طباعتك</h2>
+      <p class="note">أرسل ملفك عبر واتساب وحدّد عدد النسخ ونوع الطباعة، ونبلغك عندما يجهز.</p>
+      <a class="btn" href="https://wa.me/9647873923319?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D8%A8%D8%A7%D8%B9%D8%A9%20%D9%85%D9%84%D9%81" target="_blank" rel="noopener noreferrer">أرسل الملف عبر واتساب</a>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>تواصل معنا</h2>
+      <p>العنوان: واسط، قضاء الحي، حي الوحدة، مجاور جامع الرسول</p>
+      <p>ساعات الدوام: يوميًا صباحًا ومساءً</p>
+      <p>الهاتف: <a href="tel:07873923319" dir="ltr">07873923319</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© أوراق وأقلام. تصميم وتطوير: التقني عباس كامل</p>
+  </footer>
+
+</div>
+</body>
+</html>
